@@ -1,0 +1,15 @@
+{
+  "name": "terminal-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "./build.sh && tsx server/server.ts",
+    "build": "./build.sh",
+    "watch": "./build.sh && tsx server/watch.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4",
+    "typescript": "^5"
+  }
+}

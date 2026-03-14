@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof -ti:3000)",
+      "Bash(xargs kill:*)",
+      "Bash(npx tsc:*)",
+      "Bash(/Users/moshegottlieb/source/sharkfood/terminal-web/build.sh)",
+      "Bash(chmod +x /Users/moshegottlieb/source/sharkfood/terminal-web/dev.sh)"
+    ]
+  }
+}

@@ -1,6 +1,42 @@
 {
+  "menu": [
+    {
+      "label": "File",
+      "items": [
+        { "label": "Restart program", "url": "/" }
+      ]
+    },
+    {
+      "label": "Edit",
+      "items": [
+        { "label": "Contact", "url": "/contact" }
+      ]
+    },
+    {
+      "label": "View",
+      "items": [
+        { "label": "Projects", "items": [
+          { "label": "Fooducate", "url": "/projects/fooducate" },
+          { "label": "Instant Talk", "url": "/projects/instant-talk" },
+          { "label": "IPRS Firewall", "url": "/projects/iprs-firewall" },
+          { "label": "Clalit Child Development", "url": "/projects/clalit" },
+          { "label": "Top Secret", "url": "/projects/secret" }
+        ]}
+      ]
+    },
+    {
+      "label": "Help",
+      "items": [
+        { "label": "Contact", "url": "/contact" },
+        { "label": "Privacy Policy", "url": "/privacypolicy" },
+        { "divider": true },
+        { "label": "About", "url": "/about" }
+      ]
+    }
+  ],
   "home": {
     "type": "page",
+    "route": "/",
     "title": "SHARKFOOD.COM",
     "content": [
       {
@@ -17,33 +53,34 @@
         "options": [
           {
             "content": "About",
-            "url": "#about"
+            "url": "/about"
           },
           {
             "content": "Projects",
-            "url": "#projects"
+            "url": "/projects"
           },
           {
             "content": "Contact",
-            "url": "#contact"
+            "url": "/contact"
           },
           {
             "content": "Privacy Policy",
-            "url": "#privacy"
+            "url": "/privacypolicy"
           }
         ]
       }
     ]
   },
-  "privacy" : {
-    "type" : "page",
-    "title" : "Privacy Policy",
-    "content" : [
+  "privacy": {
+    "type": "page",
+    "route": "/privacypolicy",
+    "title": "Privacy Policy",
+    "content": [
       "- This website will not track you",
       "- This website does not retain any personal information about users",
       "- No cookies were used during the creation of this site; this website is crumb free",
       "- There are no third party trackers, analytics, or other online services used with this website",
-      "- The website is hosted using Amazon’s AWS technologies, which as far as I know, does not track you",
+      "- The website is hosted using Amazon's AWS technologies, which as far as I know, does not track you",
       "- The information in contact forms will be transmitted as is, and will be used for your contact reason only",
       {
         "type": "text",
@@ -54,6 +91,7 @@
   },
   "about": {
     "type": "page",
+    "route": "/about",
     "title": "About Sharkfood",
     "content": [
       {
@@ -73,14 +111,15 @@
       {
         "type": "link",
         "content": "Contact",
-        "url": "#contact"
+        "url": "/contact"
       }
     ]
   },
-  "fooducate" : {
-    "type" : "page",
-    "title" : "Fooducate",
-    "content" : [
+  "fooducate": {
+    "type": "page",
+    "route": "/projects/fooducate",
+    "title": "Fooducate",
+    "content": [
       {
         "type": "image",
         "content": "img/apps/fooducate.jpg"
@@ -99,14 +138,15 @@
         "type": "link",
         "content": "Projects",
         "navigation-dir": "back",
-        "url": "#projects"
+        "url": "/projects"
       }
     ]
   },
-  "instant-talk" : {
-    "type" : "page",
-    "title" : "Instant Talk",
-    "content" : [
+  "instant-talk": {
+    "type": "page",
+    "route": "/projects/instant-talk",
+    "title": "Instant Talk",
+    "content": [
       {
         "type": "image",
         "content": "img/apps/instanttalk.jpg"
@@ -125,14 +165,15 @@
         "type": "link",
         "content": "Projects",
         "navigation-dir": "back",
-        "url": "#projects"
+        "url": "/projects"
       }
     ]
   },
-  "iprs-firewall" : {
-    "type" : "page",
-    "title" : "IPRS Firewall",
-    "content" : [
+  "iprs-firewall": {
+    "type": "page",
+    "route": "/projects/iprs-firewall",
+    "title": "IPRS Firewall",
+    "content": [
       {
         "type": "image",
         "content": "img/apps/firewall.png"
@@ -147,14 +188,15 @@
         "type": "link",
         "content": "Projects",
         "navigation-dir": "back",
-        "url": "#projects"
+        "url": "/projects"
       }
     ]
   },
-  "secret" : {
-    "type" : "page",
-    "title" : "Top Secret",
-    "content" : [
+  "secret": {
+    "type": "page",
+    "route": "/projects/secret",
+    "title": "Top Secret",
+    "content": [
       {
         "type": "image",
         "content": "img/apps/secret.png"
@@ -164,27 +206,28 @@
       "Implemented the Signal end to end encryption protocol.",
       "iOS/Android/Web/Backend C/C++,Swift,Flutter,Typescript/NodeJS,PostgreSQL,AWS",
       {
-        "type" : "text",
-        "content" : "0000000 6153 6f79\n 0000004 616e 6172\n0000008 5720 6c69\n000000c 2064 6548\n0000010 7261 7374",
-        "class" : "hexdump"
+        "type": "text",
+        "content": "0000000 6153 6f79\n 0000004 616e 6172\n0000008 5720 6c69\n000000c 2064 6548\n0000010 7261 7374",
+        "class": "hexdump"
       },
       {
         "type": "text",
         "content": "*** DECRYPTION FAILED - UNAUTHORIZED ACCESS PROHIBITED ***",
-        "class": ["terminal-text-reverse", "reducted","center"]
+        "class": ["terminal-text-reverse", "reducted", "center"]
       },
       {
         "type": "link",
         "content": "Projects",
         "navigation-dir": "back",
-        "url": "#projects"
+        "url": "/projects"
       }
     ]
   },
-  "clalit" : {
-    "type" : "page",
-    "title" : "Clalit Child Development",
-    "content" : [
+  "clalit": {
+    "type": "page",
+    "route": "/projects/clalit",
+    "title": "Clalit Child Development",
+    "content": [
       {
         "type": "image",
         "content": "img/apps/clalit.jpg"
@@ -198,23 +241,24 @@
         "type": "link",
         "content": "Projects",
         "navigation-dir": "back",
-        "url": "#projects"
+        "url": "/projects"
       }
     ]
   },
   "projects": {
     "type": "page",
+    "route": "/projects",
     "title": "Projects",
     "content": [
       {
-        "type" : "text",
-        "content" : "SELECT * FROM projects WHERE status = 'public';",
-        "class" : "border"
+        "type": "text",
+        "content": "SELECT * FROM projects WHERE status = 'public';",
+        "class": "border"
       },
       {
-        "type" : "text",
-        "content" : "RUNNING QUERY...",
-        "class" : "executing"
+        "type": "text",
+        "content": "RUNNING QUERY...",
+        "class": "executing"
       },
       {
         "type": "image",
@@ -223,7 +267,7 @@
       {
         "type": "link",
         "content": "Fooducate",
-        "url": "#fooducate"
+        "url": "/projects/fooducate"
       },
       {
         "type": "image",
@@ -232,7 +276,7 @@
       {
         "type": "link",
         "content": "Instant Talk",
-        "url": "#instant-talk"
+        "url": "/projects/instant-talk"
       },
       {
         "type": "image",
@@ -241,7 +285,7 @@
       {
         "type": "link",
         "content": "IPRS firewall",
-        "url": "#iprs-firewall"
+        "url": "/projects/iprs-firewall"
       },
       {
         "type": "image",
@@ -250,7 +294,7 @@
       {
         "type": "link",
         "content": "Clalit Child Development",
-        "url": "#clalit"
+        "url": "/projects/clalit"
       },
       {
         "type": "image",
@@ -259,12 +303,13 @@
       {
         "type": "link",
         "content": "Top Secret",
-        "url": "#secret"
+        "url": "/projects/secret"
       }
     ]
   },
   "contact": {
     "type": "page",
+    "route": "/contact",
     "title": "Contact",
     "content": [
       {
@@ -273,7 +318,7 @@
       },
       {
         "type": "link",
-        "content":"email",
+        "content": "email",
         "url": "mailto:contact@sharkfood.com?subject=Contact%20Form"
       },
       {

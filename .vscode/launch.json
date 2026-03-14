@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (Chrome)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "server/server.ts"],
+      "preLaunchTask": "build",
+      "serverReadyAction": {
+        "pattern": "Accepting connections",
+        "uriFormat": "http://localhost:3000",
+        "action": "debugWithChrome"
+      }
+    },
+    {
+      "name": "Debug (Firefox)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["tsx", "server/server.ts"],
+      "preLaunchTask": "build",
+      "serverReadyAction": {
+        "pattern": "Accepting connections",
+        "uriFormat": "http://localhost:3000",
+        "action": "openExternally"
+      }
+    }
+  ]
+}

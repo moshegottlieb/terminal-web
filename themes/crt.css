@@ -1,0 +1,193 @@
+/* CRT Terminal Theme */
+
+:root {
+  --terminal-bg: #000000;
+  --terminal-text: #FF8000;
+  --terminal-glow: rgba(255, 128, 0, 0.1);
+  --terminal-shadow: rgba(255, 128, 0, 0.1);
+  --terminal-cursor: #FF8000;
+}
+
+body {
+  background-color: #000;
+  background-image: radial-gradient(rgba(255,128,0, 0.35), #000);
+  color: var(--terminal-text);
+  font-family: 'VGA', monospace;
+  font-size: 36px;
+  line-height: 1.2;
+  text-shadow: 0 0 2px var(--terminal-glow);
+  padding: 10px;
+  mask-image: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0px,
+    rgba(0, 0, 0, 1) 1px,
+    rgba(0, 0, 0, 0) 2px
+  );
+}
+
+#terminal {
+  margin: 0px;
+  padding: 20px;
+  background-color: var(--terminal-bg);
+  min-height: calc(100vh - 80px);
+}
+
+.terminal-text {
+  letter-spacing: 0.05em;
+}
+
+.hexdump {
+  border: var(--terminal-text) 1px solid;
+}
+
+.terminal-text-reverse, .terminal-title {
+  color: var(--terminal-bg);
+  background-color: var(--terminal-text);
+}
+
+.reducted {
+  animation: reducted-animation 3s step-end infinite;
+}
+
+@keyframes reducted-animation {
+  0%, 100% {
+    color: var(--terminal-bg);
+    background-color: var(--terminal-text);
+  }
+  50% {
+    color: var(--terminal-text);
+    background-color: var(--terminal-bg);
+  }
+}
+
+.border {
+  border: var(--terminal-text) 1px solid;
+  padding: 0.5em;
+  margin: 0.5em;
+  display: inline-block;
+}
+
+/* Link styling */
+.terminal-link {
+  text-transform: uppercase;
+  color: var(--terminal-text);
+}
+
+.terminal-link:hover {
+  background-color: var(--terminal-text);
+  color: var(--terminal-bg);
+}
+
+/* Image */
+.terminal-image {
+  filter: sepia(40%);
+  border: 1px solid var(--terminal-text);
+}
+
+/* Selection */
+.terminal-select {
+  margin-top: 0.5em;
+  border: 1px solid var(--terminal-text);
+  padding: 0.5em;
+}
+
+.select-option {
+  padding: 0.05em;
+}
+
+.select-option:hover {
+  background-color: var(--terminal-text);
+  color: var(--terminal-bg);
+}
+
+/* Input */
+.terminal-input {
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+  border: 1px solid var(--terminal-text);
+  padding: 0.25em 0.5em;
+  font-size: 18px;
+}
+
+.terminal-input:focus {
+  box-shadow: 0 0 5px var(--terminal-glow);
+}
+
+/* Button */
+.terminal-button {
+  background-color: var(--terminal-bg);
+  color: var(--terminal-text);
+  border: 1px solid var(--terminal-text);
+  padding: 0.25em 1em;
+  font-size: 18px;
+}
+
+.terminal-button:hover {
+  background-color: var(--terminal-text);
+  color: var(--terminal-bg);
+}
+
+/* Loading */
+.loading-text {
+  border: 1px solid var(--terminal-text);
+}
+
+/* Cursor */
+.cursor {
+  background-color: var(--terminal-cursor);
+}
+
+/* CRT scan effect */
+#scan-effect {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: rgba(255,255,255,0.05);
+  left: 0px;
+  top: 0%;
+  animation: scan-effect-animation 16s linear infinite;
+}
+
+@keyframes scan-effect-animation {
+  0% { transform: translateY(100vh); opacity: 1; }
+  50% { transform: translateY(0vh); opacity: 1; }
+  51% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* CRT overlay effect */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-size: 100% 2px;
+  animation: scanline 50ms linear infinite;
+}
+
+@keyframes scanline {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 100%; }
+}
+
+/* CRT distortion effect */
+.crt-distort {
+  animation: distort 100ms ease-in-out;
+}
+
+@keyframes distort {
+  0% { transform: scale(1, 1) skewY(2deg); }
+  25% { transform: scale(1.005, 0.995) skewY(1.5deg); }
+  50% { transform: scale(0.995, 1.005) skewY(1deg); }
+  75% { transform: scale(1.005, 0.995) skewY(0.5deg); }
+  100% { transform: scale(1, 1) skewY(0deg); }
+}
