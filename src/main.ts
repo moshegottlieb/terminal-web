@@ -1,291 +1,8 @@
-// Terminal Website - Main TypeScript File
-// main.ts
-
-// Types for our content
-interface ContentPage {
-  type: 'page';
-  route: string;
-  title: string;
-  content: (ContentItem | string)[];
-}
-
-interface ContentItem {
-  type: 'text' | 'image' | 'link' | 'selection' | 'input' | 'button';
-  content: string;
-  url?: string;
-  options?: OptionItem[];
-  action?: string;
-  id?: string;
-  class?: string | string[];
-  // Only applies to link type
-  'navigation-dir'?: 'back' | 'forward';
-  // Only applies to selection type, leave empty for numeric bullets
-  bullet?: string;
-}
-
-interface OptionItem {
-  content: string;
-  url?: string;
-  action?: string;
-}
-
-interface MenuItem {
-  label?: string;
-  url?: string;
-  action?: string;
-  items?: MenuItem[];
-  divider?: boolean;
-}
-
-interface MenuDefinition {
-  label: string;
-  items: MenuItem[];
-}
-
-// Theme interface
-interface Theme {
-  name: string;
-  css: string; // path to CSS file
-  switchTo: string; // theme name to switch to
-  switchLabel: string; // label for "switch to other theme"
-  setup(terminal: HTMLElement): void;
-  teardown(): void;
-  onContentLoaded?(menu: MenuDefinition[], navigateTo: (url: string) => void, runAction: (action: string) => void): void;
-}
+import { ContentPage, ContentItem, MenuDefinition, Theme, ThemeInfo } from './types';
+import { THEMES, DEFAULT_THEME } from './themes';
 
 // Asset base path for cache-busted builds (set by build script via window.ASSET_BASE)
 declare var ASSET_BASE: string | undefined;
-
-// CRT Theme
-class CRTTheme implements Theme {
-  name = 'crt';
-  css = 'themes/crt.css';
-  switchTo = 'win311';
-  switchLabel = 'Start Windows 3.11';
-  private distortInterval: number | null = null;
-
-  setup(_terminal: HTMLElement): void {
-    const scanMove = document.createElement('div');
-    scanMove.id = 'scan-effect';
-    document.body.appendChild(scanMove);
-
-    const overlay = document.createElement('div');
-    overlay.className = 'crt-overlay';
-    document.body.appendChild(overlay);
-
-    this.distortInterval = window.setInterval(() => {
-      const intensity = Math.random() * 10;
-      if (intensity > 9) {
-        document.body.classList.add('crt-distort');
-        setTimeout(() => {
-          document.body.classList.remove('crt-distort');
-        }, 100 + Math.random() * 200);
-      }
-    }, 2000);
-  }
-
-  teardown(): void {
-    if (this.distortInterval !== null) {
-      clearInterval(this.distortInterval);
-      this.distortInterval = null;
-    }
-    const scanEffect = document.getElementById('scan-effect');
-    if (scanEffect) scanEffect.remove();
-    const overlay = document.querySelector('.crt-overlay');
-    if (overlay) overlay.remove();
-    document.body.classList.remove('crt-distort');
-  }
-}
-
-// Windows 3.11 Theme
-class Win311Theme implements Theme {
-  name = 'win311';
-  css = 'themes/win311.css';
-  switchTo = 'crt';
-  switchLabel = 'Start command line shell';
-  private windowFrame: HTMLElement | null = null;
-  private menubar: HTMLElement | null = null;
-  private closeListener: ((e: MouseEvent) => void) | null = null;
-
-  setup(terminal: HTMLElement): void {
-    // Create window frame around terminal
-    this.windowFrame = document.createElement('div');
-    this.windowFrame.className = 'win-window';
-
-    // Title bar
-    const titlebar = document.createElement('div');
-    titlebar.className = 'win-titlebar';
-
-    const title = document.createElement('span');
-    title.className = 'win-title';
-    title.textContent = 'SHARKFOOD.COM';
-    titlebar.appendChild(title);
-
-    const buttons = document.createElement('div');
-    buttons.className = 'win-buttons';
-    const btnMin = document.createElement('button');
-    btnMin.className = 'win-btn';
-    btnMin.textContent = '▼';
-    const btnMax = document.createElement('button');
-    btnMax.className = 'win-btn';
-    btnMax.textContent = '▲';
-    buttons.appendChild(btnMin);
-    buttons.appendChild(btnMax);
-    titlebar.appendChild(buttons);
-
-    // Menu bar (placeholder, populated by onContentLoaded)
-    this.menubar = document.createElement('div');
-    this.menubar.className = 'win-menubar';
-
-    // Content wrapper
-    const content = document.createElement('div');
-    content.className = 'win-content';
-
-    // Status bar
-    const statusbar = document.createElement('div');
-    statusbar.className = 'win-statusbar';
-    const statusSection = document.createElement('div');
-    statusSection.className = 'win-status-section';
-    statusSection.textContent = 'Ready';
-    statusbar.appendChild(statusSection);
-
-    // Assemble
-    this.windowFrame.appendChild(titlebar);
-    this.windowFrame.appendChild(this.menubar);
-    this.windowFrame.appendChild(content);
-    this.windowFrame.appendChild(statusbar);
-
-    // Move terminal into the window content area
-    terminal.parentNode?.insertBefore(this.windowFrame, terminal);
-    content.appendChild(terminal);
-
-    // Close menus when clicking outside
-    this.closeListener = (e: MouseEvent) => {
-      if (this.menubar && !this.menubar.contains(e.target as Node)) {
-        this.closeAllMenus();
-      }
-    };
-    document.addEventListener('click', this.closeListener);
-  }
-
-  onContentLoaded(menu: MenuDefinition[], navigateTo: (url: string) => void, runAction: (action: string) => void): void {
-    if (!this.menubar) return;
-    this.menubar.innerHTML = '';
-
-    for (const menuDef of menu) {
-      const menuItem = document.createElement('div');
-      menuItem.className = 'win-menu-item';
-      menuItem.textContent = menuDef.label;
-
-      const dropdown = this.buildDropdown(menuDef.items, navigateTo, runAction);
-      menuItem.appendChild(dropdown);
-
-      menuItem.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = dropdown.classList.contains('win-dropdown-open');
-        this.closeAllMenus();
-        if (!isOpen) {
-          dropdown.classList.add('win-dropdown-open');
-          menuItem.classList.add('win-menu-item-active');
-        }
-      });
-
-      // Hover to switch between open menus
-      menuItem.addEventListener('mouseenter', () => {
-        const anyOpen = this.menubar?.querySelector('.win-dropdown-open');
-        if (anyOpen) {
-          this.closeAllMenus();
-          dropdown.classList.add('win-dropdown-open');
-          menuItem.classList.add('win-menu-item-active');
-        }
-      });
-
-      this.menubar.appendChild(menuItem);
-    }
-  }
-
-  private buildDropdown(items: MenuItem[], navigateTo: (url: string) => void, runAction: (action: string) => void): HTMLElement {
-    const dropdown = document.createElement('div');
-    dropdown.className = 'win-dropdown';
-
-    for (const item of items) {
-      if (item.divider) {
-        const divider = document.createElement('div');
-        divider.className = 'win-dropdown-divider';
-        dropdown.appendChild(divider);
-        continue;
-      }
-
-      const entry = document.createElement('div');
-      entry.className = 'win-dropdown-item';
-      entry.textContent = item.label || '';
-
-      if (item.items) {
-        // Submenu
-        entry.classList.add('win-dropdown-has-submenu');
-        const submenu = this.buildDropdown(item.items, navigateTo, runAction);
-        submenu.classList.add('win-submenu');
-        entry.appendChild(submenu);
-
-        entry.addEventListener('mouseenter', () => {
-          submenu.classList.add('win-dropdown-open');
-        });
-        entry.addEventListener('mouseleave', () => {
-          submenu.classList.remove('win-dropdown-open');
-        });
-      } else if (item.url) {
-        entry.addEventListener('click', (e) => {
-          e.stopPropagation();
-          this.closeAllMenus();
-          navigateTo(item.url!);
-        });
-      } else if (item.action) {
-        entry.addEventListener('click', (e) => {
-          e.stopPropagation();
-          this.closeAllMenus();
-          runAction(item.action!);
-        });
-      }
-
-      dropdown.appendChild(entry);
-    }
-
-    return dropdown;
-  }
-
-  private closeAllMenus(): void {
-    if (!this.menubar) return;
-    this.menubar.querySelectorAll('.win-dropdown-open').forEach(el => {
-      el.classList.remove('win-dropdown-open');
-    });
-    this.menubar.querySelectorAll('.win-menu-item-active').forEach(el => {
-      el.classList.remove('win-menu-item-active');
-    });
-  }
-
-  teardown(): void {
-    if (this.closeListener) {
-      document.removeEventListener('click', this.closeListener);
-      this.closeListener = null;
-    }
-    if (this.windowFrame) {
-      const terminal = this.windowFrame.querySelector('#terminal');
-      if (terminal) {
-        this.windowFrame.parentNode?.insertBefore(terminal, this.windowFrame);
-      }
-      this.windowFrame.remove();
-      this.windowFrame = null;
-    }
-    this.menubar = null;
-  }
-}
-
-const THEMES: Record<string, Theme> = {
-  'crt': new CRTTheme(),
-  'win311': new Win311Theme(),
-};
-
-const DEFAULT_THEME = 'crt';
 
 // State management
 class TerminalState {
@@ -355,25 +72,19 @@ class TerminalState {
 
   private notifyThemeMenu(): void {
     if (!this.currentTheme?.onContentLoaded || this.menuData.length === 0) return;
-    // Inject theme switch into File menu
-    const menuWithSwitch = this.menuData.map(m => {
-      if (m.label === 'File') {
-        return {
-          ...m,
-          items: [
-            ...m.items,
-            { divider: true },
-            { label: this.currentTheme!.switchLabel, action: `setTheme:${this.currentTheme!.switchTo}` }
-          ]
-        };
-      }
-      return m;
-    });
     this.currentTheme.onContentLoaded(
-      menuWithSwitch,
+      this.menuData,
       (url: string) => this.navigateTo(url),
       (action: string) => this.runAction(action)
     );
+  }
+
+  private renderThemeSwitcher(): void {
+    if (!this.currentTheme) return;
+    const otherThemes: ThemeInfo[] = Object.values(THEMES)
+      .filter(t => t.name !== this.currentTheme!.name)
+      .map(t => ({ name: t.name, label: t.label, icon: t.icon }));
+    this.currentTheme.renderThemeSwitcher(otherThemes, this.basePath, (action: string) => this.runAction(action));
   }
 
   private runAction(action: string): void {
@@ -428,11 +139,23 @@ class TerminalState {
   }
 
   // Navigate by path (e.g. "/about", "/projects/fooducate")
-  private navigateToPath(path: string): void {
+  private async navigateToPath(path: string): Promise<void> {
     const pageKey = this.routeMap[path];
     if (pageKey && this.contentData[pageKey]) {
+      const page = this.contentData[pageKey];
+      // Lazy load content if needed
+      if (!page.content && page['content-url']) {
+        try {
+          const response = await fetch(this.basePath + page['content-url']);
+          page.content = await response.json();
+        } catch (error) {
+          console.error('Failed to load page content:', error);
+          this.print(`Error: Failed to load content for '${pageKey}'.`);
+          return;
+        }
+      }
       this.clearTerminal();
-      this.currentPage = this.contentData[pageKey];
+      this.currentPage = page;
       this.renderPage(this.currentPage, pageKey);
     } else {
       // Fall back to home
@@ -474,20 +197,9 @@ class TerminalState {
       await this.typeText(titleElement, page.title);
     });
 
-    // Process each content item, injecting theme switch into home selections
-    page.content.forEach(item => {
-      if (pageId === 'home' && this.currentTheme && typeof item === 'object' && item.type === 'selection' && item.options) {
-        const augmented = {
-          ...item,
-          options: [
-            ...item.options,
-            { content: this.currentTheme.switchLabel, action: `setTheme:${this.currentTheme.switchTo}` }
-          ]
-        };
-        this.renderContentItem(augmented);
-      } else {
-        this.renderContentItem(item);
-      }
+    // Process each content item
+    (page.content || []).forEach(item => {
+      this.renderContentItem(item);
     });
 
     if (pageId != 'home') {
@@ -499,6 +211,9 @@ class TerminalState {
       }
       this.renderContentItem(back);
     }
+
+    // Render theme switcher icons
+    this.renderThemeSwitcher();
 
     // Start printing from queue
     this.processQueue();
@@ -675,7 +390,7 @@ class TerminalState {
           const action = item.action;
           if (action != null) {
             buttonElement.addEventListener('click', () => {
-              eval(action);
+              this.runAction(action);
             });
           }
 
@@ -799,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const terminal = new TerminalState('terminal');
 
   // Load content and navigate based on current URL
-  terminal.loadContent('content.json').then(() => {
+  terminal.loadContent('content/content.json').then(() => {
     const path = window.location.pathname;
     terminal.navigateTo(path === '/' ? '/' : path);
   });

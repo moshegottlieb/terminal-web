@@ -1,0 +1,18 @@
+[
+  {
+    "type": "image",
+    "content": "img/apps/firewall.png"
+  },
+  "IPRS Gateway is a data packet filtering process for Linux, built for Mobile Tornado.",
+  "Built as an IP router, the gateway uses Linux packet filtering for protecting agains attacks on the MT IPRS server.",
+  "It inspects packets, makes sure the packets are valid, and also maintains statistics to protect agains DoS attacks.",
+  "It also applies in-place heuristics to help reject messages, altering the packets so they would be re-routed to the sender as a 'denied' response.",
+  "Linux, C++, Net filtering, IP Gateway, UDP",
+  "iOS, C/C++, Objective C",
+  {
+    "type": "link",
+    "content": "Projects",
+    "navigation-dir": "back",
+    "url": "/projects"
+  }
+]

@@ -137,6 +137,38 @@ body {
   background-color: var(--terminal-cursor);
 }
 
+/* Theme switcher */
+.crt-theme-switcher {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--terminal-text);
+}
+
+.crt-theme-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+}
+
+.crt-theme-item:hover .crt-theme-label {
+  background-color: var(--terminal-text);
+  color: var(--terminal-bg);
+}
+
+.crt-theme-icon {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.crt-theme-label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 /* CRT scan effect */
 #scan-effect {
   position: absolute;

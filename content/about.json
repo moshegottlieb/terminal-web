@@ -1,0 +1,21 @@
+[
+  {
+    "type": "image",
+    "content": "img/sense_logo.png"
+  },
+  "I started Sharkfood as a software development shop back in 2010.",
+  "Over the years, I've developed many interesting projects, some are publicly known, others are top secret :)",
+  "I've built retail apps, instant messaging using the Signal end-to-end encryption protocol, and more.",
+  "Whether it's iOS, Android, Web Frontend/Backend, or custom C++ projects, I deliver on time and on budget.",
+  "I'm based in Berlin.",
+  "Check out my Linkedin, Github and Stackoverflow for more info.",
+  {
+    "type": "text",
+    "content": "Over the years, I've developed many interesting projects, some are publicly known, others are top secret :)"
+  },
+  {
+    "type": "link",
+    "content": "Contact",
+    "url": "/contact"
+  }
+]

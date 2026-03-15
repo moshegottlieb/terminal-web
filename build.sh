@@ -13,16 +13,17 @@ echo "Building with hash: $HASH"
 rm -rf dist
 mkdir -p "dist/$HASH"
 
-# Compile TypeScript
-echo "Compiling TypeScript..."
-npx tsc
+# Type check
+echo "Type checking..."
+npx tsc --noEmit
 
-# Move compiled JS into the versioned directory
-mv dist/main.js "dist/$HASH/main.js"
+# Bundle TypeScript
+echo "Bundling..."
+npx esbuild src/main.ts --bundle --outfile="dist/$HASH/main.js" --target=es2020
 
 # Copy assets into versioned directory (rewrite absolute font paths)
 sed "s|url('/fonts/|url('/$HASH/fonts/|g" style.css > "dist/$HASH/style.css"
-cp content.json "dist/$HASH/content.json"
+cp -r content "dist/$HASH/content"
 cp -r fonts "dist/$HASH/fonts"
 cp -r img "dist/$HASH/img"
 cp -r themes "dist/$HASH/themes"

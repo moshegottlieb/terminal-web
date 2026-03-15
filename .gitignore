@@ -8,6 +8,7 @@ cache.db
 cache/*
 dist/*
 node_modules
+.claude
 
 *.DS_Store
 .AppleDouble

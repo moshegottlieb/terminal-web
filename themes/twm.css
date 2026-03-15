@@ -1,0 +1,324 @@
+/* TWM (X11) Theme - Classic Tab Window Manager */
+
+:root {
+  --twm-fg: #000000;
+  --twm-bg: #c0c0c0;
+  --twm-titlebar: #52A899;
+  --twm-titlebar-fg: #c0c0c0;
+  --twm-link: #00008b;
+  --twm-select: #52A899;
+  --twm-select-fg: #ffffff;
+}
+
+/* Root window - classic X11 weave stipple */
+body {
+  background-color: #738b8b;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='4' height='4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='2' height='2' fill='%23668080'/%3E%3Crect x='2' y='2' width='2' height='2' fill='%23668080'/%3E%3Crect x='2' y='0' width='2' height='2' fill='%23809090'/%3E%3Crect x='0' y='2' width='2' height='2' fill='%23809090'/%3E%3C/svg%3E");
+  color: var(--twm-fg);
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 13px;
+  line-height: 1.3;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Window frame - teal/white checkerboard border */
+.twm-window {
+  border: 2px solid #73808E;
+  max-width: 700px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Title bar - solid teal with checkerboard fill between title and right button */
+.twm-titlebar {
+  background-color: var(--twm-titlebar);
+  color: var(--twm-titlebar-fg);
+  padding: 3px 4px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Courier New', 'Courier', monospace;
+  user-select: none;
+  min-height: 20px;
+  gap: 4px;
+}
+
+.twm-title {
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+/* Checkerboard fill between title text and right button */
+.twm-titlebar-fill {
+  flex: 1;
+  align-self: stretch;
+  margin: 2px 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='2' height='2' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23008080'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23008080'/%3E%3Crect x='1' y='0' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='0' y='1' width='1' height='1' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+/* TWM titlebar buttons - flat teal squares, gray icons */
+.twm-btn {
+  width: 18px;
+  height: 18px;
+  background-color: var(--twm-titlebar);
+  border: 1px solid var(--twm-titlebar-fg);
+  cursor: default;
+  padding: 0;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Iconify button - filled dot */
+.twm-btn-iconify::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: var(--twm-titlebar-fg);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Resize button - nested squares from top-left, 1/3 and 2/3 */
+.twm-btn-resize {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23c0c0c0' stroke-width='1' stroke-linecap='butt' shape-rendering='crispEdges'%3E%3Cline x1='10.5' y1='0' x2='10.5' y2='11'/%3E%3Cline x1='0' y1='10.5' x2='11' y2='10.5'/%3E%3Cline x1='5.5' y1='0' x2='5.5' y2='6'/%3E%3Cline x1='0' y1='5.5' x2='6' y2='5.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+/* Content area */
+.twm-content {
+  background-color: var(--twm-bg);
+  padding: 8px;
+  min-height: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Scrollbar */
+.twm-content::-webkit-scrollbar {
+  width: 14px;
+}
+
+.twm-content::-webkit-scrollbar-track {
+  background-color: var(--twm-bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='4' height='4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='2' height='2' fill='%23b0b0b0'/%3E%3Crect x='2' y='2' width='2' height='2' fill='%23b0b0b0'/%3E%3C/svg%3E");
+}
+
+.twm-content::-webkit-scrollbar-thumb {
+  background-color: var(--twm-bg);
+  border: 1px solid #808080;
+}
+
+/* Terminal in window */
+#terminal {
+  padding: 0;
+  margin: 0;
+  min-height: auto;
+}
+
+/* Title */
+.terminal-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--twm-fg);
+  margin-bottom: 6px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #808080;
+}
+
+/* Text */
+.terminal-text {
+  margin-bottom: 4px;
+}
+
+.terminal-text-reverse {
+  color: var(--twm-select-fg);
+  background-color: var(--twm-select);
+  padding: 1px 2px;
+}
+
+.hexdump {
+  border: 1px solid var(--twm-fg);
+  background-color: #b0b0b0;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12px;
+}
+
+.reducted {
+  animation: twm-reducted 3s step-end infinite;
+}
+
+@keyframes twm-reducted {
+  0%, 100% {
+    color: var(--twm-select-fg);
+    background-color: var(--twm-select);
+  }
+  50% {
+    color: var(--twm-fg);
+    background-color: transparent;
+  }
+}
+
+.border {
+  border: 1px solid var(--twm-fg);
+  padding: 3px 5px;
+  margin: 3px 0;
+  display: inline-block;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 12px;
+}
+
+/* Links */
+.terminal-link {
+  color: var(--twm-link);
+  text-decoration: underline;
+}
+
+.terminal-link:hover {
+  color: #0000ff;
+  background-color: transparent;
+}
+
+/* Images */
+.terminal-image {
+  border: 1px solid var(--twm-fg);
+  filter: none;
+}
+
+/* Selection */
+.select-container {
+  margin: 5px 0;
+}
+
+.terminal-select {
+  background-color: var(--twm-bg);
+  border: 1px solid var(--twm-fg);
+  margin-top: 3px;
+  padding: 1px;
+}
+
+.select-option {
+  padding: 1px 4px;
+  font-size: 13px;
+}
+
+.select-option:hover {
+  background-color: var(--twm-select);
+  color: var(--twm-select-fg);
+}
+
+/* Input */
+.terminal-input {
+  background-color: #e0e0e0;
+  color: var(--twm-fg);
+  border: 1px solid var(--twm-fg);
+  padding: 1px 3px;
+  font-size: 13px;
+  font-family: 'Courier New', 'Courier', monospace;
+}
+
+/* Button */
+.terminal-button {
+  background-color: var(--twm-bg);
+  color: var(--twm-fg);
+  border: 1px solid var(--twm-fg);
+  padding: 2px 10px;
+  font-size: 13px;
+  font-family: 'Courier New', 'Courier', monospace;
+}
+
+.terminal-button:hover {
+  background-color: #d0d0d0;
+}
+
+.terminal-button:active {
+  background-color: #a0a0a0;
+}
+
+/* Loading */
+.loading-text {
+  border: 1px solid var(--twm-fg);
+}
+
+/* Cursor */
+.cursor {
+  background-color: var(--twm-fg);
+}
+
+/* Desktop icons - TWM style like xclock */
+.twm-desktop-icons {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 1;
+}
+
+.twm-desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  width: 64px;
+  user-select: none;
+}
+
+/* Teal square with icon rendered as white/gray mono */
+.twm-desktop-icon-img {
+  width: 48px;
+  height: 48px;
+  background-color: var(--twm-titlebar);
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* Adapt icons to white-on-teal mono: screen blend makes black→teal, white→white */
+.twm-desktop-icon-img img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  display: block;
+}
+
+.twm-desktop-icon-label {
+  font-size: 11px;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Courier New', 'Courier', monospace;
+  word-wrap: break-word;
+  max-width: 64px;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .twm-desktop-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
+    order: 1;
+  }
+
+  .twm-window {
+    order: 0;
+  }
+}

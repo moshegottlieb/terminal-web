@@ -3,29 +3,17 @@
   "configurations": [
     {
       "name": "Debug (Chrome)",
-      "type": "node",
+      "type": "chrome",
       "request": "launch",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["tsx", "server/server.ts"],
-      "preLaunchTask": "build",
-      "serverReadyAction": {
-        "pattern": "Accepting connections",
-        "uriFormat": "http://localhost:3000",
-        "action": "debugWithChrome"
-      }
+      "url": "http://localhost:3000",
+      "preLaunchTask": "server"
     },
     {
       "name": "Debug (Firefox)",
-      "type": "node",
+      "type": "firefox",
       "request": "launch",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["tsx", "server/server.ts"],
-      "preLaunchTask": "build",
-      "serverReadyAction": {
-        "pattern": "Accepting connections",
-        "uriFormat": "http://localhost:3000",
-        "action": "openExternally"
-      }
+      "url": "http://localhost:3000",
+      "preLaunchTask": "server"
     }
   ]
 }

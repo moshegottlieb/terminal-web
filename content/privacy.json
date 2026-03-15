@@ -1,0 +1,13 @@
+[
+  "- This website will not track you",
+  "- This website does not retain any personal information about users",
+  "- No cookies were used during the creation of this site; this website is crumb free",
+  "- There are no third party trackers, analytics, or other online services used with this website",
+  "- The website is hosted using Amazon's AWS technologies, which as far as I know, does not track you",
+  "- The information in contact forms will be transmitted as is, and will be used for your contact reason only",
+  {
+    "type": "text",
+    "content": "- This privacy policy was written by a human who cares about privacy",
+    "class": "reducted"
+  }
+]

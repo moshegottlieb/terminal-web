@@ -1,0 +1,22 @@
+[
+  {
+    "type": "image",
+    "content": "img/apps/instanttalk.jpg"
+  },
+  "Instant Talk",
+  "Push To Talk client for the IPRS system.",
+  "Built for Mobile Tornado, I started this project and imported code from legacy systems such as BREW and Symbian to iOS.",
+  "Implemented a realtime Push To Talk system with a sub second call setup, and an instant messenger.",
+  "iOS, C/C++, Objective C",
+  {
+    "type": "link",
+    "content": "Instant Talk in the AppStore",
+    "url": "https://apps.apple.com/us/app/instanttalk-ptt/id721180594?itsct=apps_box_link&itscg=30200"
+  },
+  {
+    "type": "link",
+    "content": "Projects",
+    "navigation-dir": "back",
+    "url": "/projects"
+  }
+]

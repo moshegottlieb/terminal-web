@@ -1,0 +1,22 @@
+[
+  {
+    "type": "image",
+    "content": "img/apps/fooducate.jpg"
+  },
+  "Fooducate - Eat a little better.",
+  "I've been working on Fooducate from 2010-2022, until it was sold to Maple Media.",
+  "Over the years Fooducate had won awards, and was a constant member of the top 10 apps in the Food & Health category, and was even presented in Apple ads for the iPhone.",
+  "Fooducate is available only in the US AppStore.",
+  "iOS, C++, Swift, Objective C",
+  {
+    "type": "link",
+    "content": "Fooducate in the AppStore",
+    "url": "https://apps.apple.com/us/app/fooducate-nutrition-coach/id398436747?itsct=apps_box_link&itscg=30200"
+  },
+  {
+    "type": "link",
+    "content": "Projects",
+    "navigation-dir": "back",
+    "url": "/projects"
+  }
+]

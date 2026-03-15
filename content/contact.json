@@ -1,0 +1,38 @@
+[
+  {
+    "type": "image",
+    "content": "img/social/mail.png"
+  },
+  {
+    "type": "link",
+    "content": "email",
+    "url": "mailto:contact@sharkfood.com?subject=Contact%20Form"
+  },
+  {
+    "type": "image",
+    "content": "img/social/linkedin.png"
+  },
+  {
+    "type": "link",
+    "url": "https://www.linkedin.com/in/moshegottlieb/",
+    "content": "linkedin"
+  },
+  {
+    "type": "image",
+    "content": "img/social/github.png"
+  },
+  {
+    "type": "link",
+    "url": "https://github.com/moshegottlieb",
+    "content": "Github"
+  },
+  {
+    "type": "image",
+    "content": "img/social/stackoverflow.png"
+  },
+  {
+    "type": "link",
+    "url": "https://stackoverflow.com/users/1610530/moshe-gottlieb",
+    "content": "Stackoverflow"
+  }
+]

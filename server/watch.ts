@@ -3,8 +3,8 @@ import path from 'path';
 import { execSync } from 'child_process';
 
 const ROOT = path.resolve(__dirname, '..');
-const WATCH_DIRS = ['src', 'themes'];
-const WATCH_FILES = ['style.css', 'content.json', 'index.html'];
+const WATCH_DIRS = ['src', 'themes', 'content'];
+const WATCH_FILES = ['style.css', 'index.html'];
 
 let timeout: ReturnType<typeof setTimeout> | null = null;
 

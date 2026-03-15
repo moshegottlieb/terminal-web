@@ -10,6 +10,24 @@
         "isDefault": true
       },
       "problemMatcher": "$tsc"
+    },
+    {
+      "label": "server",
+      "type": "shell",
+      "command": "npx tsx server/server.ts",
+      "isBackground": true,
+      "dependsOn": "build",
+      "problemMatcher": {
+        "owner": "custom",
+        "pattern": {
+          "regexp": "^$"
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^.*$",
+          "endsPattern": "^.*Accepting connections.*$"
+        }
+      }
     }
   ]
 }

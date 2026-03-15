@@ -1,0 +1,57 @@
+[
+  {
+    "type": "text",
+    "content": "SELECT * FROM projects WHERE status = 'public';",
+    "class": "border"
+  },
+  {
+    "type": "text",
+    "content": "RUNNING QUERY...",
+    "class": "executing"
+  },
+  {
+    "type": "image",
+    "content": "img/apps/fooducate-thumb.jpg"
+  },
+  {
+    "type": "link",
+    "content": "Fooducate",
+    "url": "/projects/fooducate"
+  },
+  {
+    "type": "image",
+    "content": "img/apps/instanttalk-thumb.jpg"
+  },
+  {
+    "type": "link",
+    "content": "Instant Talk",
+    "url": "/projects/instant-talk"
+  },
+  {
+    "type": "image",
+    "content": "img/apps/firewall-thumb.png"
+  },
+  {
+    "type": "link",
+    "content": "IPRS firewall",
+    "url": "/projects/iprs-firewall"
+  },
+  {
+    "type": "image",
+    "content": "img/apps/clalit-thumb.jpg"
+  },
+  {
+    "type": "link",
+    "content": "Clalit Child Development",
+    "url": "/projects/clalit"
+  },
+  {
+    "type": "image",
+    "content": "img/apps/secret-thumb.png"
+  },
+  {
+    "type": "link",
+    "content": "Top Secret",
+    "url": "/projects/secret"
+  }
+]

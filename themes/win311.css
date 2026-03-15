@@ -384,3 +384,65 @@ body {
 .cursor {
   background-color: var(--win-content-text);
 }
+
+/* Desktop icons */
+.win-desktop-icons {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 1;
+}
+
+.win-desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  width: 64px;
+  user-select: none;
+}
+
+.win-desktop-icon-img {
+  width: 32px;
+  height: 32px;
+}
+
+.win-desktop-icon-label {
+  font-size: 11px;
+  color: var(--win-white);
+  text-align: center;
+  text-shadow: 1px 1px 1px var(--win-black);
+  word-wrap: break-word;
+  max-width: 64px;
+}
+
+.win-desktop-icon:focus .win-desktop-icon-label,
+.win-desktop-icon.selected .win-desktop-icon-label {
+  background-color: var(--win-titlebar);
+  color: var(--win-titlebar-text);
+  text-shadow: none;
+}
+
+/* Mobile: icons below the window */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .win-desktop-icons {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 16px;
+    order: 1;
+  }
+
+  .win-window {
+    order: 0;
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "type": "image",
+    "content": "img/apps/clalit.jpg"
+  },
+  "Clalit Child Development ages 0-2",
+  "Built for the largest HMO in Israel, Clalit health services.",
+  "The app tracked the development of children ages 0-2, using the steps described by Clalit.",
+  "This project is a joint effort with Yaniv Fridman, and is our unique invention sold to Clalit.",
+  "iOS/Android, Objective C/Java",
+  {
+    "type": "link",
+    "content": "Projects",
+    "navigation-dir": "back",
+    "url": "/projects"
+  }
+]
