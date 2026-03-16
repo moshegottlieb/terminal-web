@@ -10,10 +10,6 @@
   "I'm based in Berlin.",
   "Check out my Linkedin, Github and Stackoverflow for more info.",
   {
-    "type": "text",
-    "content": "Over the years, I've developed many interesting projects, some are publicly known, others are top secret :)"
-  },
-  {
     "type": "link",
     "content": "Contact",
     "url": "/contact"
