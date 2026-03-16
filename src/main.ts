@@ -249,7 +249,8 @@ class TerminalState {
   }
 
   // Render individual content item
-  private renderContentItem(rawItem: ContentItem | string): void {
+  private renderContentItem(rawItem: ContentItem | string, parent?: HTMLElement): void {
+    const target = parent || this.terminal;
     let item: ContentItem;
     if (typeof rawItem === 'string') {
       item = {
@@ -262,11 +263,24 @@ class TerminalState {
     let element: HTMLElement;
     let id_element: HTMLElement | null = null;
     switch (item.type) {
+      case 'textblock':
+        const blockContainer = document.createElement('div');
+        element = blockContainer;
+        blockContainer.className = 'textblock-container';
+        blockContainer.dir = item.dir || 'ltr';
+        target.appendChild(blockContainer);
+        if (item.items) {
+          item.items.forEach(child => {
+            this.renderContentItem(child, blockContainer);
+          });
+        }
+        break;
+
       case 'text':
         const paragraph = document.createElement('p');
         element = paragraph;
         paragraph.className = 'terminal-text';
-        this.terminal.appendChild(paragraph);
+        target.appendChild(paragraph);
         this.queuePrint(async () => {
           await this.typeText(paragraph, item.content);
         });
@@ -276,7 +290,7 @@ class TerminalState {
         const imgContainer = document.createElement('div');
         element = imgContainer;
         imgContainer.className = 'image-container';
-        this.terminal.appendChild(imgContainer);
+        target.appendChild(imgContainer);
 
         this.queuePrint(async () => {
           await this.loadImageProgressively(imgContainer, item.content);
@@ -287,7 +301,7 @@ class TerminalState {
         const linkContainer = document.createElement('div');
         element = linkContainer;
         linkContainer.className = 'link-container';
-        this.terminal.appendChild(linkContainer);
+        target.appendChild(linkContainer);
         const linkElement = document.createElement('a');
         id_element = linkElement;
 
@@ -323,7 +337,7 @@ class TerminalState {
         const selectContainer = document.createElement('div');
         element = selectContainer;
         selectContainer.className = 'select-container';
-        this.terminal.appendChild(selectContainer);
+        target.appendChild(selectContainer);
 
         this.queuePrint(async () => {
           const selectLabel = document.createElement('span');
@@ -362,7 +376,7 @@ class TerminalState {
         const inputContainer = document.createElement('div');
         element = inputContainer;
         inputContainer.className = 'input-container';
-        this.terminal.appendChild(inputContainer);
+        target.appendChild(inputContainer);
         const inputElement = document.createElement('input');
         id_element = inputElement;
         this.queuePrint(async () => {
@@ -381,7 +395,7 @@ class TerminalState {
         const buttonContainer = document.createElement('div');
         element = buttonContainer;
         buttonContainer.className = 'button-container';
-        this.terminal.appendChild(buttonContainer);
+        target.appendChild(buttonContainer);
 
         const buttonElement = document.createElement('button');
         element = buttonElement;

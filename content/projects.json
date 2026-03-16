@@ -11,6 +11,15 @@
   },
   {
     "type": "image",
+    "content": "img/apps/finfitness-thumb.jpg"
+  },
+  {
+    "type": "link",
+    "content": "Fin Fitness",
+    "url": "/projects/finfitness"
+  },
+  {
+    "type": "image",
     "content": "img/apps/fooducate-thumb.jpg"
   },
   {

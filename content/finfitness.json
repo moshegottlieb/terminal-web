@@ -1,0 +1,51 @@
+[
+    {
+        "type": "image",
+        "content": "img/apps/finfitness.jpg"
+    },
+    "Fin Fitness is a focused app for people who run and walk regularly and want a clean, private way to track their workouts.",
+    "Import your workouts from Apple Health and turn them into a personal running log. Add notes, photos, comments, and locations to remember where you ran, what you saw, and how the workout felt. Everything stays on your device.",
+    "Explore your workouts in detail. Review metrics, heart rate, elevation, and performance insights to better understand every run and walk. Assign shoes to workouts manually or automatically and track their mileage so you know exactly when it’s time for a replacement.",
+    "Fin Fitness also helps you stay informed at a glance. Live Home Screen widgets show steps, activity, distance, altitude, and shoe mileage directly on your iPhone.",
+    "Looking back at your workouts becomes easy and fun. With automatic geo-tagging, you can quickly find runs by place. Wondering when you last ran in Copenhagen? Just search and rediscover the workout.",
+    "When you want to share an activity, Fin Fitness includes a powerful share editor that lets you create clean, beautiful workout cards with maps, stats, photos, and captions.",
+    "Fin Fitness respects your privacy. Your workouts are stored on your device and are not uploaded to external services. Sharing is always optional and fully controlled by you.",
+    "Privacy note",
+    "Your device may use Apple services such as iCloud, WeatherKit, and location services while using the app (for example for geo-tagging or weather data). The app developer does not receive, store, or have access to this information.",
+    {
+        "type": "link",
+        "content": "Privacy Policy",
+        "url": "/finfitness/privacy-policy"
+    },
+    {
+        "type": "link",
+        "content": "Fin Fitness in the AppStore",
+        "url": "https://apps.apple.com/us/app/finfitness/id6759727732"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/finfitness/1.jpg"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/finfitness/2.jpg"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/finfitness/3.jpg"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/finfitness/4.jpg"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/finfitness/5.jpg"
+    },
+    {
+        "type": "link",
+        "content": "Projects",
+        "navigation-dir": "back",
+        "url": "/projects"
+    }
+]

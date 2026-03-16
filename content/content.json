@@ -1,128 +1,191 @@
 {
-  "menu": [
-    {
-      "label": "File",
-      "items": [
-        { "label": "Restart program", "url": "/" }
-      ]
-    },
-    {
-      "label": "Edit",
-      "items": [
-        { "label": "Contact", "url": "/contact" }
-      ]
-    },
-    {
-      "label": "View",
-      "items": [
-        { "label": "Projects", "items": [
-          { "label": "Fooducate", "url": "/projects/fooducate" },
-          { "label": "Instant Talk", "url": "/projects/instant-talk" },
-          { "label": "IPRS Firewall", "url": "/projects/iprs-firewall" },
-          { "label": "Clalit Child Development", "url": "/projects/clalit" },
-          { "label": "Top Secret", "url": "/projects/secret" }
-        ]}
-      ]
-    },
-    {
-      "label": "Help",
-      "items": [
-        { "label": "Contact", "url": "/contact" },
-        { "label": "Privacy Policy", "url": "/privacypolicy" },
-        { "divider": true },
-        { "label": "About", "url": "/about" }
-      ]
-    }
-  ],
-  "home": {
-    "type": "page",
-    "route": "/",
-    "title": "SHARKFOOD.COM",
-    "content": [
-      {
-        "type": "image",
-        "content": "img/sense_logo.png"
-      },
-      {
-        "type": "text",
-        "content": "Welcome to Sharkfood public terminal."
-      },
-      {
-        "type": "selection",
-        "content": "Please select an option below to continue:",
-        "options": [
-          {
-            "content": "About",
-            "url": "/about"
-          },
-          {
-            "content": "Projects",
-            "url": "/projects"
-          },
-          {
-            "content": "Contact",
-            "url": "/contact"
-          },
-          {
-            "content": "Privacy Policy",
-            "url": "/privacypolicy"
-          }
+    "menu": [
+        {
+            "label": "File",
+            "items": [
+                {
+                    "label": "Restart program",
+                    "url": "/"
+                }
+            ]
+        },
+        {
+            "label": "Edit",
+            "items": [
+                {
+                    "label": "Contact",
+                    "url": "/contact"
+                }
+            ]
+        },
+        {
+            "label": "View",
+            "items": [
+                {
+                    "label": "Projects",
+                    "items": [
+                        {
+                            "label": "Fin Fitness",
+                            "url": "/projects/finfitness"
+                        },
+                        {
+                            "label": "Fooducate",
+                            "url": "/projects/fooducate"
+                        },
+                        {
+                            "label": "Instant Talk",
+                            "url": "/projects/instant-talk"
+                        },
+                        {
+                            "label": "IPRS Firewall",
+                            "url": "/projects/iprs-firewall"
+                        },
+                        {
+                            "label": "Clalit Child Development",
+                            "url": "/projects/clalit"
+                        },
+                        {
+                            "label": "Top Secret",
+                            "url": "/projects/secret"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "label": "Help",
+            "items": [
+                {
+                    "label": "Contact",
+                    "url": "/contact"
+                },
+                {
+                    "label": "Privacy Policy",
+                    "url": "/privacypolicy"
+                },
+                {
+                    "divider": true
+                },
+                {
+                    "label": "About",
+                    "url": "/about"
+                }
+            ]
+        }
+    ],
+    "home": {
+        "type": "page",
+        "route": "/",
+        "title": "SHARKFOOD.COM",
+        "content": [
+            {
+                "type": "image",
+                "content": "img/sense_logo.png"
+            },
+            {
+                "type": "text",
+                "content": "Welcome to Sharkfood public terminal."
+            },
+            {
+                "type": "selection",
+                "content": "Please select an option below to continue:",
+                "options": [
+                    {
+                        "content": "About",
+                        "url": "/about"
+                    },
+                    {
+                        "content": "Projects",
+                        "url": "/projects"
+                    },
+                    {
+                        "content": "Contact",
+                        "url": "/contact"
+                    },
+                    {
+                        "content": "Privacy Policy",
+                        "url": "/privacypolicy"
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  "privacy": {
-    "type": "page",
-    "route": "/privacypolicy",
-    "title": "Privacy Policy",
-    "content-url": "content/privacy.json"
-  },
-  "about": {
-    "type": "page",
-    "route": "/about",
-    "title": "About Sharkfood",
-    "content-url": "content/about.json"
-  },
-  "projects": {
-    "type": "page",
-    "route": "/projects",
-    "title": "Projects",
-    "content-url": "content/projects.json"
-  },
-  "fooducate": {
-    "type": "page",
-    "route": "/projects/fooducate",
-    "title": "Fooducate",
-    "content-url": "content/fooducate.json"
-  },
-  "instant-talk": {
-    "type": "page",
-    "route": "/projects/instant-talk",
-    "title": "Instant Talk",
-    "content-url": "content/instant-talk.json"
-  },
-  "iprs-firewall": {
-    "type": "page",
-    "route": "/projects/iprs-firewall",
-    "title": "IPRS Firewall",
-    "content-url": "content/iprs-firewall.json"
-  },
-  "secret": {
-    "type": "page",
-    "route": "/projects/secret",
-    "title": "Top Secret",
-    "content-url": "content/secret.json"
-  },
-  "clalit": {
-    "type": "page",
-    "route": "/projects/clalit",
-    "title": "Clalit Child Development",
-    "content-url": "content/clalit.json"
-  },
-  "contact": {
-    "type": "page",
-    "route": "/contact",
-    "title": "Contact",
-    "content-url": "content/contact.json"
-  }
+    },
+    "privacy": {
+        "type": "page",
+        "route": "/privacypolicy",
+        "title": "Privacy Policy",
+        "content-url": "content/privacy.json"
+    },
+    "about": {
+        "type": "page",
+        "route": "/about",
+        "title": "About Sharkfood",
+        "content-url": "content/about.json"
+    },
+    "projects": {
+        "type": "page",
+        "route": "/projects",
+        "title": "Projects",
+        "content-url": "content/projects.json"
+    },
+    "finfitness": {
+        "type": "page",
+        "route": "/projects/finfitness",
+        "title": "Fin Fitness",
+        "content-url": "content/finfitness.json"
+    },
+    "fooducate": {
+        "type": "page",
+        "route": "/projects/fooducate",
+        "title": "Fooducate",
+        "content-url": "content/fooducate.json"
+    },
+    "instant-talk": {
+        "type": "page",
+        "route": "/projects/instant-talk",
+        "title": "Instant Talk",
+        "content-url": "content/instant-talk.json"
+    },
+    "iprs-firewall": {
+        "type": "page",
+        "route": "/projects/iprs-firewall",
+        "title": "IPRS Firewall",
+        "content-url": "content/iprs-firewall.json"
+    },
+    "secret": {
+        "type": "page",
+        "route": "/projects/secret",
+        "title": "Top Secret",
+        "content-url": "content/secret.json"
+    },
+    "clalit": {
+        "type": "page",
+        "route": "/projects/clalit",
+        "title": "Clalit Child Development",
+        "content-url": "content/clalit.json"
+    },
+    "finfitness-privacy": {
+        "type": "page",
+        "route": "/finfitness/privacy-policy",
+        "title": "Fin Fitness Privacy Policy",
+        "content-url": "content/finfitness-privacy.json"
+    },
+    "finfitness-privacy-de": {
+        "type": "page",
+        "route": "/finfitness/privacy-policy-de",
+        "title": "Fin Fitness Datenschutzerklärung",
+        "content-url": "content/finfitness-privacy-de.json"
+    },
+    "finfitness-privacy-he": {
+        "type": "page",
+        "route": "/finfitness/privacy-policy-he",
+        "title": "מדיניות פרטיות Fin Fitness",
+        "content-url": "content/finfitness-privacy-he.json"
+    },
+    "contact": {
+        "type": "page",
+        "route": "/contact",
+        "title": "Contact",
+        "content-url": "content/contact.json"
+    }
 }

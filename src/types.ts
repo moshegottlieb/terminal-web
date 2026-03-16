@@ -7,7 +7,7 @@ export interface ContentPage {
 }
 
 export interface ContentItem {
-  type: 'text' | 'image' | 'link' | 'selection' | 'input' | 'button';
+  type: 'text' | 'image' | 'link' | 'selection' | 'input' | 'button' | 'textblock';
   content: string;
   url?: string;
   options?: OptionItem[];
@@ -18,6 +18,9 @@ export interface ContentItem {
   'navigation-dir'?: 'back' | 'forward';
   // Only applies to selection type, leave empty for numeric bullets
   bullet?: string;
+  // Only applies to textblock type
+  dir?: 'ltr' | 'rtl';
+  items?: (ContentItem | string)[];
 }
 
 export interface OptionItem {

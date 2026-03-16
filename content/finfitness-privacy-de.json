@@ -1,0 +1,34 @@
+[
+    "Datenschutzerklärung für Fin Fitness",
+    "Letzte Aktualisierung: 16. März 2026",
+    "Im Falle von Abweichungen zwischen dieser Übersetzung und der englischen Version ist die englische Version maßgeblich.",
+    "Fin Fitness wurde entwickelt, um Ihre Privatsphäre zu respektieren. Die App erfasst, speichert oder überträgt keine Ihrer persönlichen Daten an den Entwickler.",
+    "Datenspeicherung",
+    "Alle Trainingsdaten, Notizen, Fotos, Schuhinformationen und andere Informationen, die Sie in Fin Fitness hinzufügen, werden lokal auf Ihrem Gerät gespeichert. Der Entwickler von Fin Fitness empfängt, speichert oder verarbeitet keine dieser Daten.",
+    "Datenübertragung",
+    "Fin Fitness sendet keine Ihrer persönlichen Daten an Server, die vom Entwickler betrieben werden. Die App enthält keine Analyse-, Tracking-Frameworks oder Datenerfassungsdienste Dritter, die vom Entwickler betrieben werden.",
+    "Apple-Dienste",
+    "Fin Fitness nutzt bestimmte Apple-Dienste, um Funktionen innerhalb der App bereitzustellen. Diese Dienste können Daten gemäß den eigenen Datenschutzrichtlinien von Apple verarbeiten. Beispiele sind:",
+    "- iCloud - Ihr Gerät kann iCloud verwenden, um App-Daten zu synchronisieren oder zu sichern, wenn Sie iCloud auf Ihrem Gerät aktiviert haben.",
+    "- Apple Maps - Kartenfunktionen können Apple Maps-Dienste nutzen, um Routen oder Orte im Zusammenhang mit Ihren Trainings anzuzeigen.",
+    "- Ortungsdienste - Falls aktiviert, kann Ihr Gerät Standortdaten für Funktionen wie Geo-Tagging von Trainings oder die Anzeige von Karten verwenden.",
+    "Der Entwickler von Fin Fitness erhält keinen Zugriff auf Daten, die von diesen Apple-Diensten verarbeitet werden.",
+    "Teilen",
+    "Fin Fitness ermöglicht es Ihnen, Bilder oder Zusammenfassungen Ihrer Trainings zu erstellen, die Sie teilen können. Das Teilen wird immer von Ihnen initiiert und kontrolliert. Die App veröffentlicht oder verbreitet Ihre Daten nicht automatisch.",
+    "Datenschutz für Kinder",
+    "Fin Fitness erfasst wissentlich keine persönlichen Informationen von Personen, einschließlich Kindern. Da die App keine Benutzerdaten an den Entwickler erfasst oder überträgt, werden keine persönlichen Informationen vom Entwickler gespeichert.",
+    "Änderungen dieser Datenschutzerklärung",
+    "Diese Datenschutzerklärung kann von Zeit zu Zeit aktualisiert werden. Aktualisierungen werden durch die Anpassung des oben genannten Datums \"Letzte Aktualisierung\" kenntlich gemacht.",
+    "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, können Sie den Entwickler über die Kontaktinformationen auf der App Store-Seite der App kontaktieren.",
+    {
+        "type": "link",
+        "content": "Kontakt",
+        "url": "mailto:finfitness@sharkfood.com?subject=FinFitness"
+    },
+    {
+        "type": "link",
+        "content": "Fin Fitness",
+        "navigation-dir": "back",
+        "url": "/projects/finfitness"
+    }
+]

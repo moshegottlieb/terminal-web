@@ -1,0 +1,43 @@
+[
+    "Privacy Policy for Fin Fitness",
+    "Last updated: Mar-16-2026",
+    "Fin Fitness is designed to respect your privacy. The app does not collect, store, or transmit your personal data to the developer.",
+    "Data Storage",
+    "All workout data, notes, photos, shoe information, and other information you add in Fin Fitness are stored locally on your device. The developer of Fin Fitness does not receive, store, or process any of this data.",
+    "Data Transmission",
+    "Fin Fitness does not send your personal data to any servers operated by the developer. The app does not include analytics, tracking frameworks, or third-party data collection services operated by the developer.",
+    "Apple Services",
+    "Fin Fitness uses certain Apple services to provide functionality within the app. These services may process data according to Apple's own privacy policies. Examples include:",
+    "- iCloud - Your device may use iCloud to synchronize or back up app data if you have iCloud enabled on your device.",
+    "- Apple Maps - Map features may use Apple Maps services to display routes or locations related to your workouts.",
+    "- Location Services - If enabled, your device may use location data for features such as geo-tagging workouts or displaying maps.",
+    "The developer of Fin Fitness does not receive access to data processed by these Apple services.",
+    "Sharing",
+    "Fin Fitness allows you to generate images or summaries of your workouts that you may choose to share. Sharing is always initiated and controlled by you. The app does not automatically publish or distribute your data.",
+    "Children's Privacy",
+    "Fin Fitness does not knowingly collect personal information from anyone, including children. Because the app does not collect or transmit user data to the developer, no personal information is stored by the developer.",
+    "Changes to This Privacy Policy",
+    "This privacy policy may be updated from time to time. Any updates will be reflected by updating the \"Last updated\" date above.",
+    "If you have questions about this privacy policy, you may contact the developer through the contact information provided on the app's App Store page.",
+    {
+        "type": "link",
+        "content": "Contact",
+        "url": "mailto:finfitness@sharkfood.com?subject=FinFitness"
+    },
+    {
+        "type": "link",
+        "content": "Deutsch 🇩🇪",
+        "url": "/finfitness/privacy-policy-de"
+    },
+    {
+        "type": "link",
+        "content": "🇮🇱 עברית",
+        "url": "/finfitness/privacy-policy-he"
+    },
+    {
+        "type": "link",
+        "content": "Fin Fitness",
+        "navigation-dir": "back",
+        "url": "/projects/finfitness"
+    }
+]
