@@ -25,6 +25,10 @@
                     "label": "Projects",
                     "items": [
                         {
+                            "label": "Shark Slides",
+                            "url": "/projects/sharkslides"
+                        },
+                        {
                             "label": "Fin Fitness",
                             "url": "/projects/finfitness"
                         },
@@ -128,6 +132,12 @@
         "title": "Projects",
         "content-url": "content/projects.json"
     },
+    "sharkslides": {
+        "type": "page",
+        "route": "/projects/sharkslides",
+        "title": "Shark Slides",
+        "content-url": "content/sharkslides.json"
+    },
     "finfitness": {
         "type": "page",
         "route": "/projects/finfitness",
@@ -181,6 +191,12 @@
         "route": "/finfitness/privacy-policy-he",
         "title": "מדיניות פרטיות Fin Fitness",
         "content-url": "content/finfitness-privacy-he.json"
+    },
+    "sharkslides-privacy": {
+        "type": "page",
+        "route": "/sharkslides/privacy-policy",
+        "title": "Shark Slides Privacy Policy",
+        "content-url": "content/sharkslides-privacy.json"
     },
     "contact": {
         "type": "page",

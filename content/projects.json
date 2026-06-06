@@ -11,6 +11,15 @@
   },
   {
     "type": "image",
+    "content": "img/apps/sharkslides-thumb.png"
+  },
+  {
+    "type": "link",
+    "content": "Shark Slides",
+    "url": "/projects/sharkslides"
+  },
+  {
+    "type": "image",
     "content": "img/apps/finfitness-thumb.jpg"
   },
   {
