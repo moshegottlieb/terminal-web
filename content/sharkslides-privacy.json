@@ -1,0 +1,30 @@
+[
+    "Privacy Policy for Shark Slides",
+    "Last updated: Jun-06-2026",
+    "Shark Slides is designed to respect your privacy. The app does not collect, store, or transmit your personal data to the developer.",
+    "Data Storage",
+    "The photos and videos you display in Shark Slides — whether from your Photos library or from files you choose — remain on your device. The developer of Shark Slides does not receive, store, or process any of this content.",
+    "Data Transmission",
+    "Shark Slides does not send your personal data to any servers operated by the developer. The app does not include analytics, tracking frameworks, or third-party data collection services operated by the developer.",
+    "Apple Services",
+    "Shark Slides uses certain Apple services to provide functionality within the app. These services may process data according to Apple's own privacy policies. Examples include:",
+    "- Photos Library - With your permission, the app reads photos and videos from your Photos library so you can display them in a slideshow.",
+    "- iCloud - Your device may use iCloud to access photos and videos stored in iCloud if you have iCloud Photos enabled on your device.",
+    "The developer of Shark Slides does not receive access to data processed by these Apple services.",
+    "Children's Privacy",
+    "Shark Slides does not knowingly collect personal information from anyone, including children. Because the app does not collect or transmit user data to the developer, no personal information is stored by the developer.",
+    "Changes to This Privacy Policy",
+    "This privacy policy may be updated from time to time. Any updates will be reflected by updating the \"Last updated\" date above.",
+    "If you have questions about this privacy policy, you may contact the developer through the contact information provided on the app's App Store page.",
+    {
+        "type": "link",
+        "content": "Contact",
+        "url": "mailto:sharkslides@sharkfood.com?subject=SharkSlides"
+    },
+    {
+        "type": "link",
+        "content": "Shark Slides",
+        "navigation-dir": "back",
+        "url": "/projects/sharkslides"
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "type": "image",
+        "content": "img/apps/sharkslides.png"
+    },
+    "Easy Photos slideshows",
+    "SharkSlides is a simple yet useful slideshow viewer.",
+    "It can play just about any quicktime available image or video format.",
+    "View slideshows using Photos as the source featuring shuffle (which is a feature we missed most in Photos) and video playback.",
+    "Choose from either Photos or select files or folders from your computer.",
+    "Privacy note",
+    "Your device may use Apple services such as iCloud while using the app (for example to access photos stored in iCloud). The app developer does not receive, store, or have access to your photos or videos.",
+    {
+        "type": "link",
+        "content": "Privacy Policy",
+        "url": "/sharkslides/privacy-policy"
+    },
+    {
+        "type": "link",
+        "content": "Shark Slides in the AppStore",
+        "url": "https://apps.apple.com/us/app/shark-slides-photos-and-video-slideshow/id1077393210"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkslides/1.png"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkslides/2.jpg"
+    },
+    {
+        "type": "link",
+        "content": "Projects",
+        "navigation-dir": "back",
+        "url": "/projects"
+    }
+]
