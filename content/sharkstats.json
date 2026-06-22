@@ -1,0 +1,28 @@
+[
+    {
+        "type": "image",
+        "content": "img/apps/sharkstats.png"
+    },
+    "Shark Stats delivers hassle free network monitoring.",
+    "It lives in your system menu, and shows your download/upload bandwidth in an easy to understand graph & text.",
+    "Designed to work with standard or dark menu bar.",
+    "Supports Apple Silicon and Intel processors.",
+    "Privacy note",
+    "Shark Stats reads your Mac's network statistics locally to draw its graph. The app developer does not receive, store, or have access to any of your data.",
+    {
+        "type": "link",
+        "content": "Privacy Policy",
+        "url": "/sharkstats/privacy-policy"
+    },
+    {
+        "type": "link",
+        "content": "Shark Stats in the AppStore",
+        "url": "https://apps.apple.com/us/app/shark-stats/id1086963933"
+    },
+    {
+        "type": "link",
+        "content": "Projects",
+        "navigation-dir": "back",
+        "url": "/projects"
+    }
+]

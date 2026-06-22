@@ -1,0 +1,27 @@
+[
+    "Privacy Policy for Shark Stats",
+    "Last updated: Jun-22-2026",
+    "Shark Stats is designed to respect your privacy. The app does not collect, store, or transmit your personal data to the developer.",
+    "Data Storage",
+    "Shark Stats reads network interface statistics from your Mac — such as the number of bytes sent and received — in order to draw its graph. This information stays on your device. The developer of Shark Stats does not receive, store, or process any of it.",
+    "Data Transmission",
+    "Shark Stats does not send your personal data to any servers operated by the developer. The app does not include analytics, tracking frameworks, or third-party data collection services operated by the developer.",
+    "System Services",
+    "Shark Stats uses macOS system interfaces to read per-interface network counters and to be notified when your network configuration changes. This processing happens entirely on your device, and the developer does not receive access to the data involved.",
+    "Children's Privacy",
+    "Shark Stats does not knowingly collect personal information from anyone, including children. Because the app does not collect or transmit user data to the developer, no personal information is stored by the developer.",
+    "Changes to This Privacy Policy",
+    "This privacy policy may be updated from time to time. Any updates will be reflected by updating the \"Last updated\" date above.",
+    "If you have questions about this privacy policy, you may contact the developer through the contact information provided on the app's App Store page.",
+    {
+        "type": "link",
+        "content": "Contact",
+        "url": "mailto:sharkstats@sharkfood.com?subject=SharkStats"
+    },
+    {
+        "type": "link",
+        "content": "Shark Stats",
+        "navigation-dir": "back",
+        "url": "/projects/sharkstats"
+    }
+]
