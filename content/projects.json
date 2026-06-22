@@ -20,6 +20,15 @@
   },
   {
     "type": "image",
+    "content": "img/apps/sharkstats-thumb.png"
+  },
+  {
+    "type": "link",
+    "content": "Shark Stats",
+    "url": "/projects/sharkstats"
+  },
+  {
+    "type": "image",
     "content": "img/apps/finfitness-thumb.jpg"
   },
   {

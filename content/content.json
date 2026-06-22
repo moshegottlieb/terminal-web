@@ -29,6 +29,10 @@
                             "url": "/projects/sharkslides"
                         },
                         {
+                            "label": "Shark Stats",
+                            "url": "/projects/sharkstats"
+                        },
+                        {
                             "label": "Fin Fitness",
                             "url": "/projects/finfitness"
                         },
@@ -138,6 +142,12 @@
         "title": "Shark Slides",
         "content-url": "content/sharkslides.json"
     },
+    "sharkstats": {
+        "type": "page",
+        "route": "/projects/sharkstats",
+        "title": "Shark Stats",
+        "content-url": "content/sharkstats.json"
+    },
     "finfitness": {
         "type": "page",
         "route": "/projects/finfitness",
@@ -197,6 +207,12 @@
         "route": "/sharkslides/privacy-policy",
         "title": "Shark Slides Privacy Policy",
         "content-url": "content/sharkslides-privacy.json"
+    },
+    "sharkstats-privacy": {
+        "type": "page",
+        "route": "/sharkstats/privacy-policy",
+        "title": "Shark Stats Privacy Policy",
+        "content-url": "content/sharkstats-privacy.json"
     },
     "contact": {
         "type": "page",
