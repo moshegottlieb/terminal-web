@@ -212,6 +212,12 @@
         "title": "מדיניות פרטיות Fin Fitness",
         "content-url": "content/finfitness-privacy-he.json"
     },
+    "sharkterm-privacy": {
+        "type": "page",
+        "route": "/sharkterm/privacy-policy",
+        "title": "SharkTerm Privacy Policy",
+        "content-url": "content/sharkterm-privacy.json"
+    },
     "sharkslides-privacy": {
         "type": "page",
         "route": "/sharkslides/privacy-policy",

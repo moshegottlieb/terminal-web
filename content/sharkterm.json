@@ -17,6 +17,13 @@
         "url": "https://sharkfood.com/downloads/sharkterm/SharkTerm-1.0.zip"
     },
     "iPad, iPhone and Mac Appstore versions coming real soon!",
+    "Privacy note",
+    "Your commands, credentials and connections stay on your device. The app developer does not receive, store, or have access to any of your data.",
+    {
+        "type": "link",
+        "content": "Privacy Policy",
+        "url": "/sharkterm/privacy-policy"
+    },
     {
         "type": "image",
         "content": "img/apps/sharkterm/1.png"

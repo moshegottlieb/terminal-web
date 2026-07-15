@@ -1,0 +1,32 @@
+[
+    "Privacy Policy for SharkTerm",
+    "Last updated: Jul-16-2026",
+    "SharkTerm is designed to respect your privacy. The app does not collect, store, or transmit your personal data to the developer.",
+    "Data Storage",
+    "Your commands, terminal output, connection settings, and SSH keys remain on your device. The developer of SharkTerm does not receive, store, or process any of this content.",
+    "Data Transmission",
+    "SharkTerm connects only to the servers you choose to connect to, such as your own SSH hosts. The app does not send your personal data to any servers operated by the developer, and does not include analytics, tracking frameworks, or third-party data collection services operated by the developer.",
+    "Apple and Microsoft Services",
+    "SharkTerm uses certain platform services to provide functionality within the app. These services may process data according to their own privacy policies. Examples include:",
+    "- Keychain - Credentials and keys you save are stored in the system keychain on your device.",
+    "- Microsoft Azure - When you sign in to Azure to connect to AD supported SSH VMs, authentication is handled by Microsoft according to Microsoft's privacy policy.",
+    "The developer of SharkTerm does not receive access to data processed by these services.",
+    "Software Updates",
+    "SharkTerm Unleashed, the standalone version, periodically checks sharkfood.com for updates. This is a standard HTTPS request and does not include any personal data.",
+    "Children's Privacy",
+    "SharkTerm does not knowingly collect personal information from anyone, including children. Because the app does not collect or transmit user data to the developer, no personal information is stored by the developer.",
+    "Changes to This Privacy Policy",
+    "This privacy policy may be updated from time to time. Any updates will be reflected by updating the \"Last updated\" date above.",
+    "If you have questions about this privacy policy, you may contact the developer through the contact information provided on the app's App Store page.",
+    {
+        "type": "link",
+        "content": "Contact",
+        "url": "mailto:sharkterm@sharkfood.com?subject=SharkTerm"
+    },
+    {
+        "type": "link",
+        "content": "SharkTerm",
+        "navigation-dir": "back",
+        "url": "/projects/sharkterm"
+    }
+]
