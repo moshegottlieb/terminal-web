@@ -402,9 +402,18 @@ class TerminalState {
         this.queuePrint(async () => {
           buttonElement.className = 'terminal-button';
           const action = item.action;
+          const url = item.url;
           if (action != null) {
             buttonElement.addEventListener('click', () => {
               this.runAction(action);
+            });
+          } else if (url != null) {
+            buttonElement.addEventListener('click', () => {
+              if (this.isExternalLink(url)) {
+                window.open(url, '_blank');
+              } else {
+                this.navigateTo(url);
+              }
             });
           }
 

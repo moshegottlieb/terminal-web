@@ -25,6 +25,10 @@
                     "label": "Projects",
                     "items": [
                         {
+                            "label": "SharkTerm",
+                            "url": "/projects/sharkterm"
+                        },
+                        {
                             "label": "Shark Slides",
                             "url": "/projects/sharkslides"
                         },
@@ -135,6 +139,12 @@
         "route": "/projects",
         "title": "Projects",
         "content-url": "content/projects.json"
+    },
+    "sharkterm": {
+        "type": "page",
+        "route": "/projects/sharkterm",
+        "title": "SharkTerm",
+        "content-url": "content/sharkterm.json"
     },
     "sharkslides": {
         "type": "page",

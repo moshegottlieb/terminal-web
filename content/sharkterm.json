@@ -1,0 +1,34 @@
+[
+    {
+        "type": "image",
+        "content": "img/apps/sharkterm.png"
+    },
+    "SharkTerm is the terminal app you always wanted!",
+    "It works much like the classic sharkfood.com website in its terminal form!",
+    "CRT screen, superior text UI and loads of goodies!",
+    "Built in SSH support and Azure SSH support of AD supported SSH VMs.",
+    "Cool colors!",
+    "Slow block cursor!",
+    "Cool animations!",
+    "Get SharkTerm Unleashed, the standalone version for macOS 26.5 and higher:",
+    {
+        "type": "button",
+        "content": "Download now!",
+        "url": "https://sharkfood.com/downloads/sharkterm/SharkTerm-1.0.zip"
+    },
+    "iPad, iPhone and Mac Appstore versions coming real soon!",
+    {
+        "type": "image",
+        "content": "img/apps/sharkterm/1.png"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkterm/2.png"
+    },
+    {
+        "type": "link",
+        "content": "Projects",
+        "navigation-dir": "back",
+        "url": "/projects"
+    }
+]

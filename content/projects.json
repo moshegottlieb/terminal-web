@@ -11,6 +11,15 @@
   },
   {
     "type": "image",
+    "content": "img/apps/sharkterm-thumb.png"
+  },
+  {
+    "type": "link",
+    "content": "SharkTerm",
+    "url": "/projects/sharkterm"
+  },
+  {
+    "type": "image",
     "content": "img/apps/sharkslides-thumb.png"
   },
   {
