@@ -10,7 +10,8 @@ class TerminalState {
   private contentData: Record<string, ContentPage> = {};
   private routeMap: Record<string, string> = {}; // route path -> page key
   private terminal: HTMLElement;
-  private printSpeed = 5; // ms between characters
+  private printSpeed = 5; // ms between prints
+  private printChars = 4; // characters per print (38400 baud)
   private printQueue: (() => Promise<void>)[] = [];
   private printing = false;
   private basePath: string;
@@ -449,8 +450,8 @@ class TerminalState {
       let i = 0;
       const typeNextChar = () => {
         if (i < text.length) {
-          element.textContent += text.charAt(i);
-          i++;
+          element.textContent += text.slice(i, i + this.printChars);
+          i += this.printChars;
           setTimeout(typeNextChar, this.printSpeed);
         } else {
           resolve();
