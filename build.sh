@@ -4,8 +4,10 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
 
-# Generate a short hash for cache busting
+# Generate a short hash for cache busting; a dirty tree gets a timestamp suffix
+# so local iteration never serves stale cached assets from the same URL
 HASH=$(git rev-parse --short HEAD 2>/dev/null || date +%s)
+[ -n "$(git status --porcelain 2>/dev/null)" ] && HASH="$HASH-$(date +%s)"
 
 echo "Building with hash: $HASH"
 

@@ -16,7 +16,12 @@
         "content": "Download now!",
         "url": "https://sharkfood.com/downloads/sharkterm/SharkTerm-1.0.zip"
     },
-    "iPad, iPhone and Mac Appstore versions coming real soon!",
+    "Or get SharkTerm for iPhone, iPad and Mac on the App Store:",
+    {
+        "type": "button",
+        "content": "App Store",
+        "url": "https://apps.apple.com/us/app/sharkterm/id6792110666"
+    },
     "Privacy note",
     "Your commands, credentials and connections stay on your device. The app developer does not receive, store, or have access to any of your data.",
     {
@@ -31,6 +36,37 @@
     {
         "type": "image",
         "content": "img/apps/sharkterm/2.png"
+    },
+    {
+        "type": "text",
+        "content": "iPhone",
+        "class": "subtitle"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkterm/3.png"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkterm/4.png"
+    },
+    {
+        "type": "text",
+        "content": "iPad",
+        "class": "subtitle"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkterm/5.png"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkterm/6.png"
+    },
+    {
+        "type": "text",
+        "content": "macOS",
+        "class": "subtitle"
     },
     {
         "type": "link",

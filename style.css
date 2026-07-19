@@ -67,6 +67,20 @@ body {
   max-width: 100%;
 }
 
+/* The image loader renders into a canvas; size it, never style it (filters break the CRT overlay) */
+.image-container canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Small dim caption under a screenshot batch */
+.subtitle {
+  font-size: 0.75em;
+  opacity: 0.7;
+  margin: -0.2em 0 1.2em;
+}
+
 /* Selection styling */
 .select-container {
   margin: 1em 0;
