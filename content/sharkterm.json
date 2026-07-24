@@ -11,7 +11,11 @@
     "Slow block cursor!",
     "Cool animations!",
     "Get SharkTerm Unleashed, the standalone version for macOS 26 and higher:",
-    "Unleashed version is not sandboxed and supports local shell (without SSH), built in Azure SSH support for AD enabled hosts, and screen recording because you need to show off your TUI apps.",
+    "Unleashed version is not sandboxed, and adds:",
+    "* Local shell sessions, not just SSH",
+    "* Built-in Azure SSH for AD enabled hosts",
+    "* Screen recording, because you need to show off your TUI apps",
+    "* Save and restore tab sets: directories, profiles, and even running programs",
     {
         "type": "button",
         "content": "Download now!",
