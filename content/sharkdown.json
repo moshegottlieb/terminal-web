@@ -1,0 +1,54 @@
+[
+    {
+        "type": "image",
+        "content": "img/apps/sharkdown.png"
+    },
+    "SharkDown is a Markdown editor for people who just want to write.",
+    "Source on one side, live preview on the other.",
+    "Drag the divider, or hide either side.",
+    "Syntax highlighting in the editor, so headings, bold and code stand out while you type.",
+    "Tables, task lists, footnotes, and code blocks highlighted in almost any language.",
+    "Themes!",
+    "Pick a built-in theme, tweak it, or build your own in the theme builder.",
+    "Including Term: green on black, for the SharkTerm crowd.",
+    "Export to HTML and PDF, or just print.",
+    "English, German, Italian, Spanish and Portuguese.",
+    "Get SharkDown+, the standalone version for macOS 26 and higher:",
+    "SharkDown+ is not sandboxed, so images next to your documents just work, and it keeps itself up to date.",
+    {
+        "type": "button",
+        "content": "Download now!",
+        "url": "https://sharkfood.com/downloads/sharkdown/SharkDown-latest.zip"
+    },
+    "Privacy note",
+    "Your documents stay on your device. The app developer does not receive, store, or have access to any of your data.",
+    {
+        "type": "link",
+        "content": "Privacy Policy",
+        "url": "/sharkdown/privacy-policy"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkdown/1.png"
+    },
+    {
+        "type": "image",
+        "content": "img/apps/sharkdown/2.png"
+    },
+    {
+        "type": "text",
+        "content": "macOS",
+        "class": "subtitle"
+    },
+    {
+        "type": "text",
+        "content": "31 October 2026",
+        "class": "subtitle"
+    },
+    {
+        "type": "link",
+        "content": "Projects",
+        "navigation-dir": "back",
+        "url": "/projects"
+    }
+]

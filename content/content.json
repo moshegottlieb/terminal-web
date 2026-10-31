@@ -29,6 +29,10 @@
                             "url": "/projects/sharkterm"
                         },
                         {
+                            "label": "SharkDown",
+                            "url": "/projects/sharkdown"
+                        },
+                        {
                             "label": "Shark Slides",
                             "url": "/projects/sharkslides"
                         },
@@ -146,6 +150,12 @@
         "title": "SharkTerm",
         "content-url": "content/sharkterm.json"
     },
+    "sharkdown": {
+        "type": "page",
+        "route": "/projects/sharkdown",
+        "title": "SharkDown",
+        "content-url": "content/sharkdown.json"
+    },
     "sharkslides": {
         "type": "page",
         "route": "/projects/sharkslides",
@@ -217,6 +227,12 @@
         "route": "/sharkterm/privacy-policy",
         "title": "SharkTerm Privacy Policy",
         "content-url": "content/sharkterm-privacy.json"
+    },
+    "sharkdown-privacy": {
+        "type": "page",
+        "route": "/sharkdown/privacy-policy",
+        "title": "SharkDown Privacy Policy",
+        "content-url": "content/sharkdown-privacy.json"
     },
     "sharkslides-privacy": {
         "type": "page",

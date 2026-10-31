@@ -20,6 +20,15 @@
   },
   {
     "type": "image",
+    "content": "img/apps/sharkdown-thumb.png"
+  },
+  {
+    "type": "link",
+    "content": "SharkDown",
+    "url": "/projects/sharkdown"
+  },
+  {
+    "type": "image",
     "content": "img/apps/sharkslides-thumb.png"
   },
   {

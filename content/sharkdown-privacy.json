@@ -1,0 +1,26 @@
+[
+    "Privacy Policy for SharkDown",
+    "Last updated: Oct-31-2026",
+    "SharkDown is designed to respect your privacy. The app does not collect, store, or transmit your personal data to the developer.",
+    "Your Documents",
+    "Your documents, themes and settings remain on your device, or wherever you choose to keep them. The developer of SharkDown does not receive, store, or process any of this content.",
+    "Network Access",
+    "SharkDown does not include analytics, tracking frameworks, or third-party data collection services. It only goes online to show images your documents link to on the web.",
+    "Software Updates",
+    "SharkDown+, the standalone version, periodically checks sharkfood.com for updates. This is a standard HTTPS request and does not include any personal data.",
+    "Children's Privacy",
+    "SharkDown does not knowingly collect personal information from anyone, including children. Because the app does not collect or transmit user data to the developer, no personal information is stored by the developer.",
+    "Changes to This Privacy Policy",
+    "This privacy policy may be updated from time to time. Any updates will be reflected by updating the \"Last updated\" date above.",
+    {
+        "type": "link",
+        "content": "Contact",
+        "url": "mailto:sharkdown@sharkfood.com?subject=SharkDown"
+    },
+    {
+        "type": "link",
+        "content": "SharkDown",
+        "navigation-dir": "back",
+        "url": "/projects/sharkdown"
+    }
+]
