@@ -8,6 +8,13 @@
     "Drag the divider, or hide either side.",
     "Syntax highlighting in the editor, so headings, bold and code stand out while you type.",
     "Tables, task lists, footnotes, and code blocks highlighted in almost any language.",
+    "iCloud!",
+    "Your documents live in iCloud Drive and save themselves as you type. No Save button.",
+    "Leave a document open on one Mac, pick it up on another, and your edits follow you. Handoff included.",
+    "Version history from all your devices, so nothing is ever really gone.",
+    "Smart Tools!",
+    "Select some text and the wand lights up with what fits: tables from CSV, totals that keep themselves up to date, lists, links, a table of contents.",
+    "With Apple Intelligence, AI tools too: summarize, proofread, translate, or just ask. On device, and always marked as AI.",
     "Themes!",
     "Pick a built-in theme, tweak it, or build your own in the theme builder.",
     "Including Term: green on black, for the SharkTerm crowd.",
@@ -21,7 +28,7 @@
         "url": "https://sharkfood.com/downloads/sharkdown/SharkDown-latest.zip"
     },
     "Privacy note",
-    "Your documents stay on your device. The app developer does not receive, store, or have access to any of your data.",
+    "Your documents stay yours: on your device, or in your own iCloud. AI runs on your device. The app developer does not receive, store, or have access to any of your data.",
     {
         "type": "link",
         "content": "Privacy Policy",
@@ -42,7 +49,7 @@
     },
     {
         "type": "text",
-        "content": "31 October 2026",
+        "content": "1 November 2026",
         "class": "subtitle"
     },
     {
