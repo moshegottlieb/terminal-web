@@ -39,6 +39,13 @@
         "content": "Download now!",
         "url": "https://sharkfood.com/downloads/sharkdown/SharkDown-latest.zip"
     },
+    "Support free software!",
+    "Buy SharkDown from the App Store and receive the iOS/iPad version as well!",
+    {
+        "type": "button",
+        "content": "App Store",
+        "url": "https://apps.apple.com/us/app/sharkdown/id6836494996"
+    },
     "Privacy note",
     "Your documents stay yours: on your device, or in your own iCloud. AI runs on your device. The app developer does not receive, store, or have access to any of your data.",
     {
